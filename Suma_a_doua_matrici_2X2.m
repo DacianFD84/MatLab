@@ -1,5 +1,5 @@
-% Suma_Matrici_2x2.m
-% Program pentru calculul sumei a două matrice de ordinul 2
+% Suma_a_doua_matrici_2X2.m
+% Program pentru calculul sumei a două matrice de ordinul 2 și afișare formatată
 
 % Solicită utilizatorului să introducă elementele primei matrice
 disp('Introduceti elementele primei matrice de ordin 2:');
@@ -22,6 +22,12 @@ end
 % Calculăm suma celor două matrice
 S = A + B;
 
-% Afișăm rezultatul
-disp('Suma celor două matrice este:');
-disp(S);
+% Afișăm rezultatul formatat pentru aspect de manual
+fprintf('Suma celor doua matrice este:\n');
+for i = 1:2
+    fprintf('   ');
+    for j = 1:2
+        fprintf('%6.2f', S(i, j));  % Precizie de 2 zecimale pentru un aspect ordonat
+    end
+    fprintf('\n');
+end
